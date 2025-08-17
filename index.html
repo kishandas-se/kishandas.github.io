@@ -67,129 +67,8 @@
         }
     </script>
     
-    <style>
-        :root {
-            --ink: #0B1221;
-            --iris: #5B7CFA;
-            --spring: #00E6B8;
-            --sand: #F5F3EE;
-            --citrus: #D7FF6B;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .animate-slide-in {
-            animation: slideIn 0.6s ease-out forwards;
-        }
-        
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(245, 243, 238, 0.8);
-        }
-        
-        .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background: linear-gradient(90deg, var(--iris), var(--spring));
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            background-size: 200% 100%;
-            animation: shimmer 2s infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-        
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(91, 124, 250, 0.15);
-            border-color: var(--iris);
-        }
-        
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-        
-        .skill-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(91, 124, 250, 0.2);
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-body bg-sand text-ink antialiased">
     <!-- Header -->
@@ -512,7 +391,7 @@
                         <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-citrus/20 to-spring/20 rounded-full border border-citrus/30">
                             <svg class="w-4 h-4 text-citrus" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
+                        </svg>
                             <span class="text-sm font-semibold text-ink">Open to Freelance Projects</span>
                         </div>
                     </div>
@@ -537,6 +416,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">Software Development</h3>
+                    <p class="text-sm text-ink/70 mt-2">Designing and implementing full-stack solutions with emphasis on clean architecture.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -546,6 +426,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">Tech Architecture</h3>
+                    <p class="text-sm text-ink/70 mt-2">Architecting scalable, resilient systems and defining clear integration patterns.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -555,6 +436,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">Team Management</h3>
+                    <p class="text-sm text-ink/70 mt-2">Leading teams, mentoring engineers, and fostering collaboration and quality.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -562,6 +444,7 @@
                         <span class="text-white font-bold text-sm">JS</span>
                     </div>
                     <h3 class="font-semibold text-ink">Node.js</h3>
+                    <p class="text-sm text-ink/70 mt-2">Building fast, event-driven backends and APIs with Node.js and ecosystem tools.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -569,6 +452,7 @@
                         <span class="text-white font-bold text-sm">A</span>
                     </div>
                     <h3 class="font-semibold text-ink">Angular</h3>
+                    <p class="text-sm text-ink/70 mt-2">Building modular, testable frontends and enterprise-grade SPAs with Angular.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -576,6 +460,7 @@
                         <span class="text-white font-bold text-sm">R</span>
                     </div>
                     <h3 class="font-semibold text-ink">React</h3>
+                    <p class="text-sm text-ink/70 mt-2">Crafting performant, component-driven UIs and interactive user experiences.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -583,6 +468,7 @@
                         <span class="text-white font-bold text-sm">N</span>
                     </div>
                     <h3 class="font-semibold text-ink">NestJS</h3>
+                    <p class="text-sm text-ink/70 mt-2">Structured backend development with TypeScript, dependency injection, and modular design.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -590,6 +476,7 @@
                         <span class="text-white font-bold text-sm">JS</span>
                     </div>
                     <h3 class="font-semibold text-ink">JavaScript</h3>
+                    <p class="text-sm text-ink/70 mt-2">Deep JS fundamentals for writing robust, cross-platform code.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -597,6 +484,7 @@
                         <span class="text-white font-bold text-sm">TS</span>
                     </div>
                     <h3 class="font-semibold text-ink">TypeScript</h3>
+                    <p class="text-sm text-ink/70 mt-2">Static typing for safer code, better developer DX and maintainability.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -604,6 +492,7 @@
                         <span class="text-white font-bold text-sm">M</span>
                     </div>
                     <h3 class="font-semibold text-ink">MongoDB</h3>
+                    <p class="text-sm text-ink/70 mt-2">Flexible document data modeling and scalable query patterns for modern apps.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -611,6 +500,7 @@
                         <span class="text-white font-bold text-sm">P</span>
                     </div>
                     <h3 class="font-semibold text-ink">PostgreSQL</h3>
+                    <p class="text-sm text-ink/70 mt-2">Relational modeling, strong consistency and advanced query capabilities.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -618,6 +508,7 @@
                         <span class="text-white font-bold text-sm">M</span>
                     </div>
                     <h3 class="font-semibold text-ink">MySQL</h3>
+                    <p class="text-sm text-ink/70 mt-2">Proven relational database for transactional systems and analytics.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -627,6 +518,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">AWS</h3>
+                    <p class="text-sm text-ink/70 mt-2">Cloud services for compute, storage, and scalable infrastructure patterns.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -636,6 +528,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">Azure</h3>
+                    <p class="text-sm text-ink/70 mt-2">Enterprise cloud solutions, managed services and deployment pipelines.</p>
                 </div>
                 
                 <div class="skill-badge bg-white/50 backdrop-blur-sm p-6 rounded-2xl border border-white/30 text-center reveal">
@@ -645,6 +538,7 @@
                         </svg>
                     </div>
                     <h3 class="font-semibold text-ink">CI/CD</h3>
+                    <p class="text-sm text-ink/70 mt-2">Automated build, test and deployment pipelines for safer releases.</p>
                 </div>
             </div>
             
@@ -907,7 +801,7 @@
                     </button>
                 </div>
                 
-                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
                     <div class="w-16 h-16 bg-gradient-to-r from-citrus to-iris rounded-2xl mb-6 flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -920,7 +814,7 @@
                     </button>
                 </div>
                 
-                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
                     <div class="w-16 h-16 bg-gradient-to-r from-iris to-spring rounded-2xl mb-6 flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
@@ -933,7 +827,7 @@
                     </button>
                 </div>
                 
-                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
                     <div class="w-16 h-16 bg-gradient-to-r from-spring to-citrus rounded-2xl mb-6 flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
@@ -946,7 +840,7 @@
                     </button>
                 </div>
                 
-                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
+                <div class="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-white/30 reveal hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col">
                     <div class="w-16 h-16 bg-gradient-to-r from-citrus to-iris rounded-2xl mb-6 flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
@@ -966,13 +860,14 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
-        <div class="container mx-auto px-4">
+        <!-- use full-width container -->
+        <div class="w-full px-4 max-w-none mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="font-heading font-bold text-4xl md:text-5xl mb-6">Let's Work Together</h2>
                 <p class="text-xl text-ink/70 max-w-2xl mx-auto">Ready to bring your next project to life? I'd love to hear about your ideas and discuss how I can help make them reality.</p>
             </div>
             
-            <div class="max-w-4xl mx-auto">
+            <div class="w-full mx-auto">
                 <!-- Contact Methods -->
                 <div class="grid md:grid-cols-3 gap-8 mb-12">
                     <!-- Email Contact -->
@@ -1171,8 +1066,9 @@
             </defs>
         </div>
         
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto">
+        <div class="w-full px-4 relative z-10">
+            <!-- expand inner wrapper to full width -->
+            <div class="w-full mx-auto">
                 <!-- Header -->
                 <div class="text-center mb-12">
                     <div class="font-heading font-bold text-3xl mb-4 bg-gradient-to-r from-iris to-spring bg-clip-text text-transparent">KD.</div>
@@ -1216,7 +1112,7 @@
                             <div class="flex items-start gap-4">
                                 <div class="w-8 h-8 bg-gradient-to-r from-spring to-citrus rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                                     </svg>
                                 </div>
                                 <div>
@@ -1228,7 +1124,7 @@
                             <div class="flex items-start gap-4">
                                 <div class="w-8 h-8 bg-gradient-to-r from-citrus to-iris rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4"/>
                                     </svg>
                                 </div>
                                 <div>
@@ -1241,7 +1137,7 @@
                                 <div class="w-8 h-8 bg-gradient-to-r from-iris to-spring rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-                                    </svg>
+                                </svg>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-white">Cloud & DevOps</p>
@@ -1257,7 +1153,7 @@
                     <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-citrus/20 to-spring/20 rounded-full border border-citrus/30 mb-6">
                         <svg class="w-5 h-5 text-citrus" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
+                    </svg>
                         <span class="font-semibold text-white">Available for Freelance & Contract Work</span>
                     </div>
                     
@@ -1296,7 +1192,7 @@
                                 </svg>
                             </a>
                             <a href="mailto:kishandas.se@gmail.com" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-all">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </a>
@@ -1310,7 +1206,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="scripts.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1503,5 +1399,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9702594461dc31b1',t:'MTc1NTM2MjE2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9702594461dc31b1',t:'MTc1NTM2MjE2Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
